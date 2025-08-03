@@ -23,13 +23,13 @@ const registerUser = async (req, res) => {
 
     res.status(200).json({
       message: "Successfully Registered",
-      team: savedTeam,
+      team: savedTeam
     });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error registering Team" });
   }
-}
+};
 
 const registerTeam = async (req, res) => {
   try {
@@ -45,9 +45,6 @@ const registerTeam = async (req, res) => {
     console.error(error);
     res.status(500).json({ message: "Error registering Team" });
   }
-}
+};
 
-export {
-    registerTeam,
-    registerUser
-}
+export { registerTeam, registerUser };

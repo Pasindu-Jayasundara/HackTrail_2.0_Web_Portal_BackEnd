@@ -19,11 +19,16 @@ const registerUser = async (req, res) => {
     }
 
     team.members.push(user);
+
+    if (team.members.length >= 4) {
+      return res.status(400).json({ error: "Team already has 4 members" });
+    }
+
     const savedTeam = await team.save();
 
     res.status(200).json({
       message: "Successfully Registered",
-      team: savedTeam
+      team: savedTeam,
     });
   } catch (error) {
     console.error(error);
@@ -33,8 +38,12 @@ const registerUser = async (req, res) => {
 
 const registerTeam = async (req, res) => {
   try {
-    const createTeam = new teamModel(req.body);
 
+    if (req.body.members.length >= 4) {
+      return res.status(400).json({ error: "Team exceeds 4 members" });
+    }
+
+    const createTeam = new teamModel(req.body);
     const savedTeam = await createTeam.save();
 
     res.status(201).json({

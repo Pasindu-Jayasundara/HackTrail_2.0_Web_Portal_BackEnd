@@ -1,15 +1,3 @@
-# HackTrail 2.0 Portal
+# HackTrail 2.0 Backend
 
-This web portal is designed for registration for HackTrail 2.0.
-
-## Features
-
-- User registration for HackTrail 2.0
-
-## Getting Started
-
-Clone the repository and follow the setup instructions to run the portal locally.
-
-## License
-
-This project is licensed under the MIT License.
+Welcome to the backend repository for **HackTrail 2.0**! This project handles the server-side logic, API endpoints, and database operations for the HackTrail 2.0 platform.

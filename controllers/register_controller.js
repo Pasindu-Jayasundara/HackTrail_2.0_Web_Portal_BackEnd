@@ -20,7 +20,7 @@ const registerUser = async (req, res) => {
 
     team.members.push(user);
 
-    if (team.members.length >= 4) {
+    if (team.members.length > 5) {
       return res.status(400).json({ error: "Team already has 4 members" });
     }
 
@@ -39,7 +39,7 @@ const registerUser = async (req, res) => {
 const registerTeam = async (req, res) => {
   try {
 
-    if (req.body.members.length >= 4) {
+    if (req.body.members.length > 5) {
       return res.status(400).json({ error: "Team exceeds 4 members" });
     }
 

@@ -13,6 +13,7 @@ configDotenv();
 
 const URI = process.env.URI;
 const PORT = process.env.PORT || 8000;
+const ORIGIN = process.env.ORIGIN;
 const SECRET_KEY = process.env.SECRET_KEY;
 
 const app = express();
@@ -25,7 +26,7 @@ const mongoStore = MongoStore.create({
 app.use(json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ORIGIN,
     credentials: true,
   })
 );

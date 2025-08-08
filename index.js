@@ -43,10 +43,10 @@ app.use(
   })
 );
 
-app.use("/", registerRouter);
-app.use("/", userRouter);
-app.use("/", teamRouter);
-app.use("/", authRouter);
+app.use("/api/v1", registerRouter);
+app.use("/api/v1", userRouter);
+app.use("/api/v1", teamRouter);
+app.use("/api/v1", authRouter);
 
 
 

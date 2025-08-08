@@ -43,11 +43,14 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("<h1>The API is working Successfully</h1>");
+})
+
 app.use("/api/v1", registerRouter);
 app.use("/api/v1", userRouter);
 app.use("/api/v1", teamRouter);
 app.use("/api/v1", authRouter);
-
 
 
 try {

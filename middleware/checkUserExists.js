@@ -1,4 +1,4 @@
-import { teamModel } from "../models/team.js";
+import { teamModel } from "../models/Team.js";
 
 export const checkUserExists = async (req, res, next) => {
   const email_ = req.query.email;

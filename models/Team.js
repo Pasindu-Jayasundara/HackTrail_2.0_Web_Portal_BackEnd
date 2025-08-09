@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { userSchema } from './user.js';
+import { userSchema } from './User.js';
 
 const teamSchema = new Schema({
   team_id: { type: Number, required: true, unique: true },

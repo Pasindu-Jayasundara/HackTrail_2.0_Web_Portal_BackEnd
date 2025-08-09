@@ -1,4 +1,4 @@
-import { teamModel } from "../models/team.js";
+import { teamModel } from "../models/Team.js";
 
 const registerUser = async (req, res) => {
   const teamId = req.body.team_id;

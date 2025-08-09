@@ -16,19 +16,12 @@ const PORT = process.env.PORT || 8000;
 const ORIGIN = process.env.ORIGIN;
 const SECRET_KEY = process.env.SECRET_KEY;
 
-const isProduction = process.env.NODE_ENV === 'production';
-const isBuild = process.argv.includes('--build') || process.env.npm_lifecycle_event === 'build';
-
 const app = express();
 
-// Only initialize MongoDB if not building
-if (!isBuild) {
 const mongoStore = MongoStore.create({
   mongoUrl: URI,
   collectionName: "sessions",
 });
-}
-
 
 app.use(json());
 app.use(

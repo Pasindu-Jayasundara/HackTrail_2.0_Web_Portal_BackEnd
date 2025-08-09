@@ -23,6 +23,11 @@ jobs:
         with:
           node-version: '22.x'
 
+      - name: Create .env file
+        run: |
+          touch .env
+          echo "${{secrets.TEST_SECRETS}}" >> .env
+
       - name: npm install, build, and test
         run: |
           npm install
